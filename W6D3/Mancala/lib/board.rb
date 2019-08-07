@@ -26,6 +26,7 @@ class Board
     render
     next_turn(end_pos)
     return :prompt if current_players_store?(current_player_name, end_pos)
+    return end_pos if @cups[end_pos].length > 1
     return :switch if @cups[end_pos].length == 1
   end
 
