@@ -27,16 +27,14 @@ describe Dessert do
 
   describe "#add_ingredient" do
     it "adds an ingredient to the ingredients array" do
-      cake.add_ingredient("eggs")
-      expect(cake.ingredients).to eq(["eggs"])
+      expect(cake.add_ingredient("eggs")).to eq(["eggs"])
     end
   end
 
   describe "#mix!" do
     it "shuffles the ingredient array" do
       original_ingredients = cake.dup
-      cake.mix!
-      expect(cake.ingredients).to_not eq(original_ingredients)
+      expect(cake.mix!).to_not eq(original_ingredients)
     end
   end
 
