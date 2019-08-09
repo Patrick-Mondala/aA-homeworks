@@ -44,8 +44,7 @@ describe Dessert do
     it "subtracts an amount from the quantity" do
       old_quantity = cake.quantity
       expected_quantity = old_quantity - 1
-      cake.eat(1)
-      expect(cake.quantity).to eq(expected_quantity)
+      expect(cake.eat(1)).to eq(expected_quantity)
     end
     it "raises an error if the amount is greater than the quantity" do
       expect { cake.eat(10000) }.to raise_error("not enough left!")
