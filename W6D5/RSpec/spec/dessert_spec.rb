@@ -33,8 +33,12 @@ describe Dessert do
 
   describe "#mix!" do
     it "shuffles the ingredient array" do
-      original_ingredients = cake.dup
+      cake.add_ingredient("flour")
+      cake.add_ingredient("egg")
+      cake.add_ingredient("milk")
+      original_ingredients = cake.ingredients.dup
       expect(cake.mix!).to_not eq(original_ingredients)
+      expect(cake.mix!).to be(cake.ingredients)
     end
   end
 
