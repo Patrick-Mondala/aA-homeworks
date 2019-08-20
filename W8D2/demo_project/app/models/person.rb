@@ -1,4 +1,5 @@
 class Person < ApplicationRecord
+    self.table_name = "people"
     validates :name, :house, presense: true
 
     belongs_to :house,
