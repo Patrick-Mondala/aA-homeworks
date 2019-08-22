@@ -25,7 +25,7 @@ class Route < ApplicationRecord
     buses_with_driver = {}
 
     buses.each do |bus|
-      buses_with_driver[bus.id] = bus.drivers
+      buses_with_driver[bus.id] = bus.drivers.map {|driver| driver.name }
     end
 
     buses_with_driver
