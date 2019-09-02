@@ -1,0 +1,21 @@
+<h2 style="display:flex;justify-content:center;">New user</h2>
+<div style="display:flex;justify-content:center;">
+<form action="<%= users_url %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <label for="Email">
+        email
+        <input id="Email" type="text" name="user[email]">
+    </label>
+    <br>
+
+    <label for="Password">
+        password
+        <input id="Password" type="password" name="user[password]">
+    </label>
+    <br>
+    
+    <input type="submit" value="Create User">
+
+</form>
+</div>
