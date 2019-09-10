@@ -2,14 +2,24 @@ function madLib(verb, adjective, noun) {
     return `We shall ${verb.toUpperCase()} the ${adjective.toUpperCase()} ${noun.toUpperCase()}.`;
 }
 
-console.log(madLib('make', 'best', 'guac')); //=> We shall MAKE the BEST GUAC.
+console.log(madLib('make', 'best', 'guac') + " #=> We shall MAKE the BEST GUAC.");
 
 function isSubstring(searchString, subString) {
     return searchString.includes(subString);
 }
 
-console.log(isSubstring("time to program", "time")); //=> true
-console.log(isSubstring("Jump for joy", "joys")); //=> false
+console.log(isSubstring("time to program", "time") + " #=> true");
+console.log(isSubstring("Jump for joy", "joys") + " #=> false");
+
+function fizzBuzz(array) {
+    let result = [];
+    array.forEach((el) => {
+        if ((el % 5 == 0 || el % 3 == 0) && !(el % 5 == 0 && el % 3 == 0)) result.push(el);
+    })
+    return result
+}
+
+console.log(fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) + " #=> 3, 5, 6, 9, 10");
 
 function isPrime(num) {
     if (num < 2) return false;
@@ -19,10 +29,10 @@ function isPrime(num) {
     return true
 }
 
-console.log(isPrime(2)); //=> true
-console.log(isPrime(10)); //=> false
-console.log(isPrime(15485863)); //=> true
-console.log(isPrime(3548563)); //=> false
+console.log(isPrime(2) + " #=> true");
+console.log(isPrime(10) + " #=> false");
+console.log(isPrime(15485863) + " #=> true");
+console.log(isPrime(3548563) + " #=> false");
 
 function sumOfNPrimes(n) {
     let found = 0;
@@ -38,6 +48,6 @@ function sumOfNPrimes(n) {
     return sum
 }
 
-console.log(sumOfNPrimes(0)) //=> 0
-console.log(sumOfNPrimes(1)) //=> 2
-console.log(sumOfNPrimes(4)) //=> 17
+console.log(sumOfNPrimes(0) + " #=> 0")
+console.log(sumOfNPrimes(1) + " #=> 2")
+console.log(sumOfNPrimes(4) + " #=> 17")
